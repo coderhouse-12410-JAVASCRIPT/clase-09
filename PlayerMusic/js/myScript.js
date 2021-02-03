@@ -20,3 +20,28 @@ pauseButton.onclick = function() {
 	pauseButton.style.visibility = "hidden";
 	music.pause();
 }
+
+// Agregamos los eventos a timer
+timer.onmouseover = resalta;
+timer.onmouseout = resalta;
+timer.onclick = resalta;
+
+// elEvento es un objeto Event y tiene property type
+function resalta(elEvento) {
+	
+	switch(elEvento.type){
+		case 'mouseout':
+			console.log("Me fuie de timmer")
+			break;
+		case 'mouseover':
+			console.log("Pase por arriba de timmer")
+			break;
+		case 'click':
+			console.log("Le hice click a timmer")
+			break;
+		default:
+			console.log(elEvento.type);
+			break;
+	}
+	
+}
